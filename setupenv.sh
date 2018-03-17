@@ -6,7 +6,6 @@ source "${BASH_GIT_ENV_HOME}/gitconfig.sh"
 # $ brew install bash-completion
 if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
  if [ -f "$(brew --prefix)/etc/bash_completion.d/git-prompt.sh" ]; then
-   # Both of these files are required.
    source "$(brew --prefix)/etc/bash_completion"
    source "$(brew --prefix)/etc/bash_completion.d/git-prompt.sh"
    GIT_PS1_SHOWDIRTYSTATE=true
@@ -41,6 +40,7 @@ alias env='env | sort'
 
 # directories
 alias wg='cd ~/w/go'
+alias bge='cd ~/w/bash-git-env'
 
 # git
 alias ga='git add'
