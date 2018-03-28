@@ -84,9 +84,9 @@ alias grpo='git remote prune origin'
 alias gfmm='git fetch origin master && git merge --no-ff origin/master'
 
 # fast git autocomplete
-complete -o default -W "\$(git branch 2>/dev/null | cut -c 3-)" git
-complete -o default -W "\$(git branch 2>/dev/null | cut -c 3-)" gco
-complete -o default -W "\$(git branch 2>/dev/null | cut -c 3-)" gm
+for cmd in git gco gm gb; do
+  complete -o default -W "\$(git branch 2>/dev/null | cut -c 3-)" ${cmd}
+done
 
 # functions
 function git_flow_feature_start_publish {
