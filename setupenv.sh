@@ -39,19 +39,18 @@ alias ..........='cd ../../../../../../../../..'
 alias env='env | sort'
 
 # directories
+alias ws='cd ~/w'
 alias wg='cd ~/w/go'
 alias bge='cd ~/w/bash-git-env'
 
 # git
 alias ga='git add'
 alias gd='git diff'
-alias pp='git pull -vvv && git push'
 alias gs='git status'
 alias gb='git branch'
 alias gm="git merge --no-ff"
 alias gmd='git merge --no-ff develop'
 alias gmm='git merge --no-ff master'
-alias kgp='kinit && time git pull -vvv'
 alias gp='time git pull -vvv'
 alias gpssu='git pull -vvv && git submodule sync && git submodule update'
 alias gssu='git submodule sync && git submodule update'
