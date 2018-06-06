@@ -15,9 +15,15 @@ else
  export PS1='[\h \[\033[0;36m\]\w\[\033[0m\]]\$ '
 fi
 
+# Bash history
+shopt -s histappend
+HISTFILESIZE=10000
+HISTSIZE=5000
+
 # environment variables
 export GOPATH="${HOME}/w/go" # $ brew install go for this to be relevant
-export PATH=$PATH:"${GOPATH}/bin"
+export GOBIN="${GOPATH}/bin"
+export PATH=$PATH:"${GOBIN}"
 #export EDITOR='subl -w'
 export EDITOR='emacs'
 export GREP_OPTIONS="--color=auto"
@@ -42,6 +48,8 @@ alias env='env | sort'
 alias ws='cd ~/w'
 alias wg='cd ~/w/go'
 alias bge='cd ~/w/bash-git-env'
+alias lg='cd ~/w/go/src/github.com/Nuro-ai/Nuro/marketplace/logistics'
+alias n='cd ~/w/go/src/github.com/Nuro-ai/Nuro'
 
 # git
 alias ga='git add'
@@ -83,9 +91,9 @@ alias grpo='git remote prune origin'
 alias gfmm='git fetch origin master && git merge --no-ff origin/master'
 
 # fast git autocomplete
-complete -o default -W "\$(git branch 2>/dev/null | cut -c 3-)" git
-complete -o default -W "\$(git branch 2>/dev/null | cut -c 3-)" gco
-complete -o default -W "\$(git branch 2>/dev/null | cut -c 3-)" gm
+for cmd in git gco gm gb; do
+  complete -o default -W "\$(git branch 2>/dev/null | cut -c 3-)" ${cmd}
+done
 
 # functions
 function git_flow_feature_start_publish {
