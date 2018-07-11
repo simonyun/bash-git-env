@@ -21,10 +21,6 @@ HISTFILESIZE=10000
 HISTSIZE=5000
 
 # environment variables
-export GOPATH="${HOME}/w/go" # $ brew install go for this to be relevant
-export GOBIN="${GOPATH}/bin"
-export PATH=$PATH:"${GOBIN}"
-#export EDITOR='subl -w'
 export EDITOR='emacs'
 export GREP_OPTIONS="--color=auto"
 
@@ -46,10 +42,7 @@ alias env='env | sort'
 
 # directories
 alias ws='cd ~/w'
-alias wg='cd ~/w/go'
 alias bge='cd ~/w/bash-git-env'
-alias lg='cd ~/w/go/src/github.com/Nuro-ai/Nuro/marketplace/logistics'
-alias n='cd ~/w/go/src/github.com/Nuro-ai/Nuro'
 
 # git
 alias ga='git add'
