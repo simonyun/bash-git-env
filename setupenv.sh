@@ -21,6 +21,9 @@ HISTFILESIZE=10000
 HISTSIZE=5000
 
 # environment variables
+export GOPATH="${HOME}/w/go" # $ brew install go for this to be relevant
+export GOBIN="${GOPATH}/bin"
+export PATH=$PATH:"${GOBIN}"
 export EDITOR='emacs'
 export GREP_OPTIONS="--color=auto"
 
