@@ -15,6 +15,11 @@ else
  export PS1='[\h \[\033[0;36m\]\w\[\033[0m\]]\$ '
 fi
 
+# Bazel Bash completion
+if [ -f "$(brew --prefix)/etc/bash_completion.d/bazel-complete.bash" ]; then
+  source "$(brew --prefix)/etc/bash_completion.d/bazel-complete.bash"
+fi
+
 # Bash history
 shopt -s histappend
 HISTFILESIZE=10000
