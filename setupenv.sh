@@ -5,14 +5,15 @@ source "${BASH_GIT_ENV_HOME}/gitconfig.sh"
 # snazzy command prompt munging
 # $ brew install bash-completion
 if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
- if [ -f "$(brew --prefix)/etc/bash_completion.d/git-prompt.sh" ]; then
-   source "$(brew --prefix)/etc/bash_completion"
-   source "$(brew --prefix)/etc/bash_completion.d/git-prompt.sh"
-   GIT_PS1_SHOWDIRTYSTATE=true
-   export PS1='[\h \[\033[0;36m\]\w\[\033[0m\]$(__git_ps1 " \[\033[1;32m\](%s)\[\033[0m\]")]\$ '
- fi
+  source "$(brew --prefix)/etc/bash_completion"
+fi
+
+if [ -f "$(brew --prefix)/etc/bash_completion.d/git-prompt.sh" ]; then
+  source "$(brew --prefix)/etc/bash_completion.d/git-prompt.sh"
+  GIT_PS1_SHOWDIRTYSTATE=true
+  export PS1='[\h \[\033[0;36m\]\w\[\033[0m\]$(__git_ps1 " \[\033[1;32m\](%s)\[\033[0m\]")]\$ '
 else
- export PS1='[\h \[\033[0;36m\]\w\[\033[0m\]]\$ '
+  export PS1='[\h \[\033[0;36m\]\w\[\033[0m\]]\$ '
 fi
 
 # Bazel Bash completion
