@@ -29,9 +29,14 @@ HISTSIZE=5000
 # environment variables
 export GOPATH="${HOME}/w/go" # $ brew install go for this to be relevant
 export GOBIN="${GOPATH}/bin"
-export PATH=$PATH:"${GOBIN}"
+PYBIN="$(python -m site --user-base)/bin"
+export PATH="${PATH}:${GOBIN}:${PYBIN}"
 export EDITOR='emacs'
 export GREP_OPTIONS="--color=auto"
+
+# python virtualenv ACTIVATE
+VIRTUALENV_DEFAULT_BIN="${HOME}/w/virtualenv/default/bin"
+source "${VIRTUALENV_DEFAULT_BIN}/activate"
 
 # shell stuff
 alias ls="ls -FG"
