@@ -17,8 +17,8 @@ else
 fi
 
 # Bazel Bash completion
-if [ -f "$(brew --prefix)/etc/bash_completion.d/bazel-complete.bash" ]; then
-  source "$(brew --prefix)/etc/bash_completion.d/bazel-complete.bash"
+if [ -f "${HOME}/.bazel/bin/bazel-complete.bash" ]; then
+  source "${HOME}/.bazel/bin/bazel-complete.bash"
 fi
 
 # Bash history
