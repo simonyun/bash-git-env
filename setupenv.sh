@@ -97,6 +97,12 @@ alias gch='git_flow_checkout_hotfix'
 alias grpo='git remote prune origin'
 alias gfmm='git fetch origin master && git merge --no-ff origin/master'
 
+# bazel
+alias bb='bazel build'
+alias bt='bazel test'
+alias bba='bazel build //...'
+alias bta='bazel test //...'
+
 # fast git autocomplete
 for cmd in git gco gm gb; do
   complete -o default -W "\$(git branch 2>/dev/null | cut -c 3-)" ${cmd}
