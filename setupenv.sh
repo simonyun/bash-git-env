@@ -33,6 +33,8 @@ PYBIN="$(python -m site --user-base)/bin"
 export PATH="${PATH}:${GOBIN}:${PYBIN}"
 export EDITOR='emacs'
 export GREP_OPTIONS="--color=auto"
+export JAVA_HOME=$(/usr/libexec/java_home)
+export ANDROID_HOME="/usr/local/share/android-sdk"
 
 # python virtualenv ACTIVATE
 VIRTUALENV_DEFAULT_BIN="${HOME}/w/virtualenv/default/bin"
