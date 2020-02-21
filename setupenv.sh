@@ -33,13 +33,17 @@ PYBIN="$(python -m site --user-base)/bin"
 export PATH="${PATH}:${GOBIN}:${PYBIN}"
 export EDITOR='emacs'
 export GREP_OPTIONS="--color=auto"
-export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8*)
 export JDK7_HOME="/Library/Java/JavaVirtualMachines/zulu-7.jdk/Contents/Home"
 export ANDROID_HOME="/usr/local/share/android-sdk"
 
-# python virtualenv ACTIVATE
-VIRTUALENV_DEFAULT_BIN="${HOME}/w/virtualenv/default/bin"
-source "${VIRTUALENV_DEFAULT_BIN}/activate"
+# python2 virtualenv ACTIVATE
+# VIRTUALENV_DEFAULT_BIN="${HOME}/w/virtualenv/default/bin"
+# source "${VIRTUALENV_DEFAULT_BIN}/activate"
+
+# python3 venv activate
+VENV_DEFAULT_BIN="${HOME}/w/venv/bin"
+source "${VENV_DEFAULT_BIN}/activate"
 
 # shell stuff
 alias ls="ls -FG"
