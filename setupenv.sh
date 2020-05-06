@@ -26,6 +26,9 @@ shopt -s histappend
 HISTFILESIZE=10000
 HISTSIZE=5000
 
+# Silence default zsh warning: https://support.apple.com/en-us/HT208050
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # environment variables
 export GOPATH="${HOME}/w/go" # $ brew install go for this to be relevant
 export GOBIN="${GOPATH}/bin"
