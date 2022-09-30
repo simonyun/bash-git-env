@@ -17,9 +17,9 @@ else
 fi
 
 # Bazel Bash completion
-if [ -f "${HOME}/.bazel/bin/bazel-complete.bash" ]; then
-  source "${HOME}/.bazel/bin/bazel-complete.bash"
-fi
+# if [ -f "${HOME}/.bazel/bin/bazel-complete.bash" ]; then
+#   source "${HOME}/.bazel/bin/bazel-complete.bash"
+# fi
 
 # Bash history
 shopt -s histappend
@@ -30,23 +30,24 @@ HISTSIZE=5000
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # environment variables
-export GOPATH="${HOME}/w/go" # $ brew install go for this to be relevant
-export GOBIN="${GOPATH}/bin"
-PYBIN="$(python -m site --user-base)/bin"
-export PATH="${PATH}:${GOBIN}:${PYBIN}"
+# export GOPATH="${HOME}/w/go" # $ brew install go for this to be relevant
+# export GOBIN="${GOPATH}/bin"
+# PYBIN="$(python -m site --user-base)/bin"
+# export PATH="${PATH}:${GOBIN}:${PYBIN}"
+export PATH="${PATH}:/Applications/Sublime Text.app/Contents/SharedSupport/bin"
 export EDITOR='emacs'
 export GREP_OPTIONS="--color=auto"
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8*)
-export JDK7_HOME="/Library/Java/JavaVirtualMachines/zulu-7.jdk/Contents/Home"
-export ANDROID_HOME="/usr/local/share/android-sdk"
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8*)
+# export JDK7_HOME="/Library/Java/JavaVirtualMachines/zulu-7.jdk/Contents/Home"
+# export ANDROID_HOME="/usr/local/share/android-sdk"
 
 # python2 virtualenv ACTIVATE
 # VIRTUALENV_DEFAULT_BIN="${HOME}/w/virtualenv/default/bin"
 # source "${VIRTUALENV_DEFAULT_BIN}/activate"
 
 # python3 venv activate
-VENV_DEFAULT_BIN="${HOME}/w/venv/bin"
-source "${VENV_DEFAULT_BIN}/activate"
+# VENV_DEFAULT_BIN="${HOME}/w/venv/bin"
+# source "${VENV_DEFAULT_BIN}/activate"
 
 # shell stuff
 alias ls="ls -FG"
@@ -108,10 +109,10 @@ alias grpo='git remote prune origin'
 alias gfmm='git fetch origin master && git merge --no-ff origin/master'
 
 # bazel
-alias bb='bazel build'
-alias bt='bazel test'
-alias bba='bazel build //...'
-alias bta='bazel test //...'
+# alias bb='bazel build'
+# alias bt='bazel test'
+# alias bba='bazel build //...'
+# alias bta='bazel test //...'
 
 # fast git autocomplete
 for cmd in git gco gm gb; do

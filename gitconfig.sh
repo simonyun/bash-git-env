@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-git config --global user.name "Simon Yun"
-git config --global user.email "509980+simonyun@users.noreply.github.com"
+# git config --global user.name "Simon Yun"
+# git config --global user.email "509980+simonyun@users.noreply.github.com"
 
 git config --global color.ui true
 git config --global alias.hist 'log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
