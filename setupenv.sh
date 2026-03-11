@@ -34,7 +34,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # export GOBIN="${GOPATH}/bin"
 # PYBIN="$(python -m site --user-base)/bin"
 # export PATH="${PATH}:${GOBIN}:${PYBIN}"
-export PATH="${PATH}:/Applications/Sublime Text.app/Contents/SharedSupport/bin"
+export PATH="/opt/homebrew/opt/python@3.14/libexec/bin:/Applications/Sublime Text.app/Contents/SharedSupport/bin:${PATH}"
 export EDITOR='emacs'
 export GREP_OPTIONS="--color=auto"
 # export JAVA_HOME=$(/usr/libexec/java_home -v 1.8*)
@@ -46,8 +46,8 @@ export GREP_OPTIONS="--color=auto"
 # source "${VIRTUALENV_DEFAULT_BIN}/activate"
 
 # python3 venv activate
-# VENV_DEFAULT_BIN="${HOME}/w/venv/bin"
-# source "${VENV_DEFAULT_BIN}/activate"
+VENV_DEFAULT_BIN="${HOME}/w/venv/bin"
+source "${VENV_DEFAULT_BIN}/activate"
 
 # shell stuff
 alias ls="ls -FG"
@@ -90,7 +90,7 @@ alias gcd='git checkout develop'
 alias gcm='git checkout master'
 alias gl='git log'
 alias glp='git log -p'
-alias gh='git hist'
+# alias gh='git hist'
 alias gss='git stash save'
 alias gsp='git stash pop'
 alias gffs='git flow feature start'
@@ -113,6 +113,9 @@ alias gfmm='git fetch origin master && git merge --no-ff origin/master'
 # alias bt='bazel test'
 # alias bba='bazel build //...'
 # alias bta='bazel test //...'
+
+# claude
+alias ccc='claude --dangerously-skip-permissions'
 
 # fast git autocomplete
 for cmd in git gco gm gb; do
