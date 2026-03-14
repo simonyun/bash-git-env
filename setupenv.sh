@@ -34,7 +34,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # export GOBIN="${GOPATH}/bin"
 # PYBIN="$(python -m site --user-base)/bin"
 # export PATH="${PATH}:${GOBIN}:${PYBIN}"
-export PATH="$(brew --prefix python3)/libexec/bin:/Applications/Sublime Text.app/Contents/SharedSupport/bin:${PATH}"
+export PATH="$(brew --prefix python3)/libexec/bin:/Applications/Sublime Text.app/Contents/SharedSupport/bin:${HOME}/.local/bin:${PATH}"
 export EDITOR='emacs'
 export GREP_OPTIONS="--color=auto"
 # export JAVA_HOME=$(/usr/libexec/java_home -v 1.8*)
